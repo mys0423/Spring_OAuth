@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @Data
-public class MemberJoinDTO {
+public class MemberDTO {
     private Long id;
     private String memberEmail;
     private String memberPassword;
@@ -15,4 +15,8 @@ public class MemberJoinDTO {
     private String socialMemberProviderId;
     private String socialMemberProvider;
     private Long memberId;
+
+    {
+        socialMemberProvider = "local";
+    }
 }

@@ -1,6 +1,6 @@
 package com.app.oauth.domain.vo;
 
-import com.app.oauth.domain.dto.MemberJoinDTO;
+import com.app.oauth.domain.dto.MemberDTO;
 import lombok.Data;
 import org.springframework.stereotype.Component;
 
@@ -16,11 +16,11 @@ public class SocialMemberVO {
         this.setSocialMemberProvider("local");
     }
 
-    public static SocialMemberVO from(MemberJoinDTO memberJoinDTO) {
+    public static SocialMemberVO from(MemberDTO memberJoinDTO) {
         SocialMemberVO socialMemberVO = new SocialMemberVO();
         socialMemberVO.setId(memberJoinDTO.getId());
         socialMemberVO.setSocialMemberProviderId(memberJoinDTO.getSocialMemberProviderId());
-        socialMemberVO.setSocialMemberProvider(memberJoinDTO.getSocialMemberProvider());
+        socialMemberVO.setSocialMemberProvider(memberJoinDTO.getSocialMemberProvider() != null ? memberJoinDTO.getSocialMemberProvider() : "local");
         socialMemberVO.setMemberId(memberJoinDTO.getMemberId());
         return socialMemberVO;
     }
