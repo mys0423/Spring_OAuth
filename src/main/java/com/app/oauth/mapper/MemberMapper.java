@@ -16,6 +16,8 @@ public interface MemberMapper {
     public boolean existsMemberByMemberEmailAndSocialMemberProvider(MemberDTO memberDTO);
 //    회원 수정
     public void update(MemberVO memberVO);
+
+    public void updatePicture(MemberVO memberVO);
 //    회원 삭제
     public void delete(Long id);
 }

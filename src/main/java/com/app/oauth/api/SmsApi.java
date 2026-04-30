@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/sms")
-public class smsApi {
+public class SmsApi {
 
     private final AuthService authService;
     private final ApiResponseDTO apiResponseDTO;
